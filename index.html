@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de feedback do hotel</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formulário de feedback do hotel</h1>
+        <p>Obrigado por escolher nosso serviço de hospedagem. Por favor, compartilhe sua experiência conosco!</p>
+    </header>
+    <main>
+        <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+            <fieldset>
+                <legend>Informações pessoais</legend>
+                <label for="full-name">Nome (obrigatório):</label>
+                <input type="text" placeholder="Ex. John Doe" required id="full-name" name="name" size="20">
+                <label for="email">Endereço de e-mail (obrigatório):</label>
+                <input type="email" id="email" name="email" size="20" placeholder="example@email.com" required>
+                <label for="age">Idade (opcional):</label>
+                <input type="number" id="age" name="age" min="3" max="100">
+            </fieldset>
+            <fieldset>
+                <legend>Esta foi a sua primeira vez em nosso hotel?</legend>
+                <label for="yes-option">Sim</label>
+                <input type="radio" id="yes-option" name="hotel-stay">
+                <label for="no-option">Não</label>
+                <input id="no-option" type="radio" name="hotel-stay" />
+            </fieldset>
+            <fieldset>
+                <legend>Por que você escolheu se hospedar em nosso hotel? (Marque todas as opções aplicáveis)</legend>
+                <label for="ads">Anúncios em mídias sociais</label>
+                <input type="checkbox" id="ads" name="ads" value="ads">
+                <label for="recommendation">Recomendação Pessoal</label>
+                <input type="checkbox" id="recommendation" name="recommendation" value="recommendation">
+                <label for="location">Local</label>
+                <input type="checkbox" id="location" name="location" value="location">
+                <label for="reputation">Reputação</label>
+                <input checked type="checkbox" id="reputation" name="reputation" value="reputation">
+                <label for="price">Preço</label>
+                <input type="checkbox" id="price" name="price" value="price">
+            </fieldset>
+            <fieldset>
+                <legend>Avaliações</legend>
+                <label for="service">Como foi o atendimento?</label>
+                <select name="service" id="service">
+                    <option value="poor">Ruim</option>
+                    <option value="satisfactory">Satisfatório</option>
+                    <option value="good">Bom</option>
+                    <option value="very-good">Muito Bom</option>
+                    <option selected value="excellent">Excelente</option>
+                </select>
+                <label for="food">Como estava a comida?</label>
+                <select id="food" name="food">
+                    <option value="poor">Ruim</option>
+                    <option value="satisfactory">Satisfatório</option>
+                    <option value="good">Bom</option>
+                    <option value="very-good">Muito Bom</option>
+                    <option selected value="excellent">Excelente</option>
+                </select>
+            </fieldset>
+            <form>
+                <label for="comments">Other Comments?</label>
+                <textarea id="comments" name="comments" rows="10" cols="30"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </form>
+    </main>
+</body>
+
+</html>
